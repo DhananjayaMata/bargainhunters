@@ -1,0 +1,98 @@
+<!-- Navigation Bar -->
+<header>
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark default-color">
+      <a class="navbar-brand" href="#"><strong>Profile</strong></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#"> Hello {{userName}}!</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" (click)="logOut()"> Logout <span class="sr-only">(current)</span></a>
+          </li>          
+        </ul>
+        
+      </div>
+    </nav> -->
+
+   <!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark default-color" [containerInside]="false">
+
+    <!-- Navbar brand -->
+    <mdb-navbar-brand><a class="navbar-brand" href="#">Profile</a></mdb-navbar-brand>
+  
+    <!-- Collapsible content -->
+    <links>
+  
+      <!-- Links -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link waves-light" mdbWavesEffect><mdb-icon fas icon="home" href="/home"></mdb-icon> Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-light" mdbWavesEffect><mdb-icon fas icon="cog"></mdb-icon> Settings</a>
+        </li>
+  
+        <!-- Dropdown -->
+        <li class="nav-item dropdown" dropdown>
+          <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+            <mdb-icon fas icon="user"></mdb-icon>{{userName}}<span class="caret"></span></a>
+          <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
+            <a class="dropdown-item waves-light" mdbWavesEffect href="/profile">My account</a>         
+            <a class="dropdown-item waves-light" (click)="logOut()" mdbWavesEffect>Logout</a>
+          </div>
+        </li>
+  
+      </ul>
+      <!-- Links -->
+    </links>
+    <!-- Collapsible content -->
+  
+  </mdb-navbar>
+  <!--/.Navbar-->
+   
+    
+  </header>
+  <!-- Main Content --> 
+  <main class="text-center my-5">
+    <div class="container">
+      <h2>My Profile</h2>
+      <form>
+        <div class="form-group row">
+          <label for="firstName" class="col-sm-2 col-form-label">First Name</label>
+          <div class="col-sm-10">
+            <div class="md-form mt-0">
+              <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="user.firstName">
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="lastName" class="col-sm-2 col-form-label">Last Name</label>
+          <div class="col-sm-10">
+            <div class="md-form mt-0">
+              <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="user.lastName">
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="aboutMe" class="col-sm-2 col-form-label">About Me</label>
+          <div class="col-sm-10">
+            <div class="md-form mt-0">
+              <textarea id="aboutMe" name="aboutMe" [(ngModel)]="user.aboutMe" class="form-control md-textarea" length="120"
+                rows="3"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-3">
+            <button type="submit" class="btn btn-primary btn-lg" (click)="updateProfile()">Update</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>

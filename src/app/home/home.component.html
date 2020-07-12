@@ -1,0 +1,205 @@
+<!-- Navigation Bar -->
+<header>
+    <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark default-color" [containerInside]="false">
+
+        <!-- Navbar brand -->
+        <mdb-navbar-brand><a class="navbar-brand" href="#">Home</a></mdb-navbar-brand>
+      
+        <!-- Collapsible content -->
+        <links>
+      
+          <!-- Links -->
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link waves-light" mdbWavesEffect><mdb-icon fas icon="home" routerLink="/profile"></mdb-icon> Profile<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-light" mdbWavesEffect><mdb-icon fas icon="cog"></mdb-icon> Settings</a>
+            </li>
+      
+            <!-- Dropdown -->
+            <!-- <li class="nav-item dropdown" dropdown>
+              <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+                <mdb-icon fas icon="user"></mdb-icon>{{userName}}<span class="caret"></span></a>
+              <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
+                <a class="dropdown-item waves-light" mdbWavesEffect href="/profile">My account</a>         
+                <a class="dropdown-item waves-light" (click)="logOut()" mdbWavesEffect>Logout</a>
+              </div>
+            </li> -->
+      
+          </ul>
+          <!-- Links -->
+        </links>
+        <!-- Collapsible content -->
+      
+      </mdb-navbar>
+  </header>
+  <!-- Main Content --> 
+  <main class="text-center my-5">
+    <div class="container">
+      <h2>Work in progress</h2>
+      <form>
+        <!-- <div class="form-group row">
+          <label for="firstName" class="col-sm-2 col-form-label">First Name</label>
+          <div class="col-sm-10">
+            <div class="md-form mt-0">
+              <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="user.firstName">
+            </div>
+          </div>
+        </div> -->
+        
+        <!-- <div class="form-group row">
+          <label for="lastName" class="col-sm-2 col-form-label">Last Name</label>
+          <div class="col-sm-10">
+            <div class="md-form mt-0">
+              <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="user.lastName">
+            </div>
+          </div>
+        </div> -->
+        <!--Card-->
+        <div class="card-deck">
+            <!-- Card -->
+            <mdb-card>
+              <div class="view overlay waves-light" mdbWavesEffect>
+                <!-- Card img -->
+                <!-- <mdb-card-img src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg" alt="Card image cap"></mdb-card-img>  -->
+                <mdb-card-img src="../assets/images/teams2.jpg"  alt="Card image cap"></mdb-card-img> 
+                
+                <a>
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+              <!--Card content-->
+              <mdb-card-body>
+                <!--Title-->
+                <mdb-card-title>
+                  <h4>400 people waiting to team up </h4>
+                </mdb-card-title>
+          
+                <!--Text-->
+                <!-- <mdb-card-text> 400 people waiting to team up to buy electronics                </mdb-card-text> -->
+          
+                <!-- <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a> -->
+              </mdb-card-body>
+            </mdb-card>
+          
+            <!-- Card -->
+            <mdb-card>
+              <div class="view rgba-white-slight waves-light" mdbWavesEffect>
+                <!-- Card img -->
+                <!-- <mdb-card-img src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg" alt="Card image cap"></mdb-card-img> -->
+                <mdb-card-img src="../assets/images/savings.jfif" alt="Card image cap"></mdb-card-img>
+                
+                <a>
+                  <div class="mask"></div>
+                </a>
+              </div>
+              <!--Card content-->
+              <mdb-card-body>
+                <!--Title-->
+                <mdb-card-title>
+                  <h4>300 bargain hunters saved close to $40000 last month</h4>
+                </mdb-card-title>
+          
+                <!--Text-->
+                <!-- <mdb-card-text> 300 bargain hunters saved close to $10000 last month                </mdb-card-text> -->
+          
+                <!-- <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a> -->
+              </mdb-card-body>
+            </mdb-card>
+          
+            <!-- Card -->
+            <mdb-card>
+              <div class="view rgba-white-slight waves-light" mdbWavesEffect>
+                <!-- Card img -->
+                <!-- <mdb-card-img src="https://mdbootstrap.com/img/Photos/Others/images/15.jpg" alt="Card image cap"></mdb-card-img> -->
+                <mdb-card-img src="../assets/images/waiting.jpg" alt="Card image cap"></mdb-card-img>
+               
+                <a>
+                  <div class="mask"></div>
+                </a>
+              </div>
+              <!--Card content-->
+              <mdb-card-body>
+                <!--Title-->
+                <mdb-card-title>
+                  <h4>25+ hunters waiting to buy this month</h4>
+                </mdb-card-title>
+          
+                <!--Text-->
+                <!-- <mdb-card-text> 25+ hunters waiting to buy this month</mdb-card-text> -->
+          
+                <!-- <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a> -->
+              </mdb-card-body>
+            </mdb-card>
+          </div>  <!--Grid row-->
+
+          <div class="form-group row"></div>
+<div class="row">
+
+    <!--Grid column-->
+    <div class="col-md-6">
+  
+      <mdb-card class="testimonial-card">
+        <!--Bacground color-->
+        <div class="card-up indigo lighten-1">   </div>
+  
+        <!--Avatar-->
+        <div class="avatar mx-auto">
+          <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2810%29.jpg" class="rounded-circle">
+        </div>
+  
+        <mdb-card-body>
+          <!--Name-->
+          <mdb-card-title>
+            <h4>Anna Doe</h4>
+          </mdb-card-title>
+          <hr>
+          <!--Quotation-->
+          <p>
+            <mdb-icon fas icon="quote-left"></mdb-icon> Saved $300 on my macbook</p>
+        </mdb-card-body>
+      </mdb-card>
+  
+    </div>
+    <!--Grid column-->
+  
+    <!--Grid column-->
+    <div class="col-md-6">
+  
+      <!--Card-->
+      <mdb-card class="testimonial-card">
+        <!--Bacground color-->
+        <div class="card-up aqua-gradient">
+        </div>
+  
+        <!--Avatar-->
+        <div class="avatar mx-auto">
+          <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2831%29.jpg" class="rounded-circle">
+        </div>
+  
+        <mdb-card-body>
+          <!--Name-->
+          <mdb-card-title>
+            <h4>Martha Smith</h4>
+          </mdb-card-title>
+          <hr>
+          <!--Quotation-->
+          <p>
+            <mdb-icon fas icon="quote-left"></mdb-icon> Manage to by bose speakers for $1500, originally priced $2000
+            yay</p>
+        </mdb-card-body>
+      </mdb-card>
+      <!--/.Card-->
+  
+    </div>
+    <!--Grid column-->
+  
+  </div>
+  <!--Grid row-->
+        
+        
+      
+      </form>
+    </div>
+  </main>
