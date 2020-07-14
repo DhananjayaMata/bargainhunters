@@ -10,22 +10,22 @@
       
           <!-- Links -->
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
+            <!-- <li class="nav-item active">
               <a class="nav-link waves-light" mdbWavesEffect><mdb-icon fas icon="home" routerLink="/profile"></mdb-icon> Profile<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
+            </li> -->
+            <!-- <li class="nav-item">
               <a class="nav-link waves-light" mdbWavesEffect><mdb-icon fas icon="cog"></mdb-icon> Settings</a>
             </li>
-      
+       -->
             <!-- Dropdown -->
-            <!-- <li class="nav-item dropdown" dropdown>
-              <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+            <li class="nav-item dropdown" dropdown>
+              <a   dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
                 <mdb-icon fas icon="user"></mdb-icon>{{userName}}<span class="caret"></span></a>
               <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
                 <a class="dropdown-item waves-light" mdbWavesEffect href="/profile">My account</a>         
                 <a class="dropdown-item waves-light" (click)="logOut()" mdbWavesEffect>Logout</a>
               </div>
-            </li> -->
+            </li>
       
           </ul>
           <!-- Links -->
@@ -36,7 +36,7 @@
   </header>
   <!-- Main Content --> 
   <main class="text-center my-5">
-    <div class="container">
+    <div class="container" ng-init="getCurrentAuthenticatedUser()">
       <h2>Work in progress</h2>
       <form>
         <!-- <div class="form-group row">

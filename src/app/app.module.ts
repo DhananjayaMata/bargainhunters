@@ -9,6 +9,7 @@ import {AmplifyAngularModule, AmplifyService} from 'aws-amplify-angular';
 import { MDBBootstrapModule } from 'angular-bootstrap-md'; 
 import { FormsModule} from '@angular/forms';
 import { HomeComponent } from './home/home.component';
+import { LogoutService } from './logout.service';
 
 
 @NgModule({
@@ -25,7 +26,7 @@ import { HomeComponent } from './home/home.component';
     MDBBootstrapModule.forRoot(),
     FormsModule,
   ],
-  providers: [AmplifyService],
+  providers: [AmplifyService,LogoutService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

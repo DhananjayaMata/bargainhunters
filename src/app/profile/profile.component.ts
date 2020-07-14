@@ -14,6 +14,7 @@ export class ProfileComponent implements OnInit {
   userName: string;
   userCreated: boolean;
   user = new User('', '', '', '', '', '');  
+  
   constructor(private api: APIService, private router: Router) {}
   getType(): string {
     return this.userCreated ? 'UpdateUser' : 'CreateUser';

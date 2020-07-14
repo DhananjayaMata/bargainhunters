@@ -14,7 +14,7 @@ export class AuthComponent implements OnInit {
     this.amplifyService.authStateChange$
       .subscribe(authState => {
         if (authState.state === 'signedIn') {
-          this.router.navigate(['/profile']);
+          this.router.navigate(['/home']);
         }
       });
 }
