@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   userCreated: boolean;
   user = new User('', '', '', '', '', '');  
   
-  constructor(private logoutservice:LogoutService,private api: APIService) { }
+  constructor(private logoutservice:LogoutService,private api: APIService, private router: Router) { }
 
   ngOnInit() {
     
@@ -50,15 +50,23 @@ export class HomeComponent implements OnInit {
     .catch(err => console.log(err));
 
   }
-  getCurrentAuthenticatedUser() {
-    this.userName=this.logoutservice.getCurrentAuthenticatedUser();
-    console.log("userName is:"+ this.userName);
+  // getCurrentAuthenticatedUser() {
+  //   this.userName=this.logoutservice.getCurrentAuthenticatedUser();
+  //   console.log("userName is:"+ this.userName);
     
-  }
+  // }
 
+
+  // logOut() {
+  //   this.logoutservice.logOut();
+  // }
 
   logOut() {
-    this.logoutservice.logOut();
+    Auth.signOut({ global: true })
+    .then(data => {
+      this.router.navigate(['/auth']);
+    })
+    .catch(err => console.log(err));
   }
 
 }
