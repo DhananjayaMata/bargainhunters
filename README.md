@@ -1,5 +1,7 @@
 # Profileapp5
 based on https://thecloudtutorials.com/2019/02/23/a-profile-app-with-aws-amplify/
+Full tutors :https://thecloudtutorials.com/2019/02/
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.28.
 
